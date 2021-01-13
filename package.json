@@ -1,0 +1,17 @@
+{
+  "name": "dosei_boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:battojin/dosei_boilerplate.git",
+  "author": "battojin",
+  "license": "MIT",
+  "scripts": {
+    "watch:server": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
