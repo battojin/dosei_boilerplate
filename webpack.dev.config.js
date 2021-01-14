@@ -1,4 +1,5 @@
 const { resolve } = require('path')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const config = {
     entry: './client/main.js',
@@ -13,10 +14,20 @@ const config = {
             {
                 test: /\.(js|jsx)$/,
                 loader: 'babel-loader',
-                excludes: /node_modules/
+                exclude: /node_modules/
             }
         ]
-    }
+    },
+    plugins: [
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: `${__dirname}/client/index.html`,
+                    to: 'index.html'
+                }
+            ]
+        })
+    ]
 }
 
 module.exports = config
