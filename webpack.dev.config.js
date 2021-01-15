@@ -1,5 +1,6 @@
 const { resolve } = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const MiniCSSExtractPlugin = require('mini-css-extract-plugin')
 
 const config = {
     entry: './client/main.js',
@@ -27,10 +28,30 @@ const config = {
                 test: /\.(js|jsx)$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/
+            },
+            {
+                test: /\.(css|scss)$/,
+                use: [
+                    {
+                        loader: MiniCSSExtractPlugin.loader,
+                        options: {
+                            publicPath: '../'
+                        }
+                    },
+                    {
+                        loader: 'css-loader'
+                    },
+                    {
+                        loader: 'sass-loader'
+                    }
+                ]
             }
         ]
     },
     plugins: [
+        new MiniCSSExtractPlugin({
+            filename: 'css/style.css'
+        }),
         new CopyWebpackPlugin({
             patterns: [
                 {
