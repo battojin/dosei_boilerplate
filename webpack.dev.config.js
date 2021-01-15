@@ -11,11 +11,12 @@ const config = {
     },
     devServer: {
         hot: true,
+        open: true,
         contentBase: resolve(__dirname, 'dist'),
         port: 8080,
         host: 'localhost',
         index: 'index.html',
-        overlays: {
+        overlay: {
             warnings: false,
             errors: true
         }
