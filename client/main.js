@@ -3,7 +3,11 @@ import ReactDOM from 'react-dom'
 import './style.scss'
 
 const Main = () => {
-    return (<div>123</div>)
+    return (
+        <div>
+            This is Main Component.
+        </div>
+    )
 }
 
 const target = document.querySelector('#root')

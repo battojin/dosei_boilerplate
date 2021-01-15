@@ -21,6 +21,10 @@ const config = {
     overlay: {
       warnings: false,
       errors: true
+    },
+    proxy: {
+      context: ['/api'],
+      target: 'http://localhost:8080'
     }
   },
   module: {
