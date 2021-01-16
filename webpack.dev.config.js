@@ -1,3 +1,5 @@
+/* eslint-disable import/no-extraneous-dependencies */
+require('dotenv').config()
 const { resolve } = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin')
