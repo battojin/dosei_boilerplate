@@ -15,7 +15,7 @@ const config = {
   },
   devServer: {
     hot: true,
-    open: true,
+    // open: true,
     contentBase: resolve(__dirname, 'dist'),
     port: 8081,
     host: 'localhost',
@@ -27,17 +27,18 @@ const config = {
     proxy: {
       context: ['/api'],
       target: 'http://localhost:8080'
-    }
+    },
+    publicPath: '/'
   },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(js|jsx)$/i,
         loader: 'babel-loader',
         exclude: /node_modules/
       },
       {
-        test: /\.(css|scss)$/,
+        test: /\.(css|scss)$/i,
         use: [
           {
             loader: MiniCSSExtractPlugin.loader,
