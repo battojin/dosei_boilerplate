@@ -11,7 +11,6 @@ const Root = () => {
       <ConnectedRouter history={history}>
         <Switch>
           <Route exact path="/" component={() => <Home />} />
-          <Route exact path="/dashboard" component={() => <Home />} />
         </Switch>
       </ConnectedRouter>
     </Provider>

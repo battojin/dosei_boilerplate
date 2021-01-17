@@ -16,8 +16,8 @@ server.get('/', (req, res) => {
   res.send('Express server')
 })
 
-server.get('/api/v1/users', (req, res) => {
-  res.send('API: user data')
+server.get('/api/v1/test', (req, res) => {
+  res.send('API: test data')
 })
 
 server.listen(PORT)

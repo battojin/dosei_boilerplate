@@ -1,6 +1,12 @@
 # dosei_boilerplate
 Boilerplate for personal use only
 
-Work in progress
+Tech stack:
+React
+Redux
+Express
 
-React + ExpressJS + Redux to be included
+How to use:
+1. yarn install - install modules
+2. yarn run dev - run the project
+3. yarn run build: client - build the project
