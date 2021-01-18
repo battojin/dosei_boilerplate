@@ -1,3 +1,5 @@
 # Personal boilerplate
  
-test
+yarn install
+
+yarn run dev
