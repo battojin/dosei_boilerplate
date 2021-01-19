@@ -6,7 +6,7 @@ const server = express()
 const PORT = process.env.PORT || 8080
 
 server.use('/static', express.static(`${__dirname}/public`))
-server.use(express.json({ limit: '100kb' }))
+server.use(express.json({ limit: '1000kb' }))
 server.use((req, res, next) => {
   console.log(`${req.method} ${req.url}`)
   next()
